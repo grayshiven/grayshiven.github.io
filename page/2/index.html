@@ -18,7 +18,7 @@
   
     <meta property="og:type" content="website">
 <meta property="og:title" content="楠佐律佑">
-<meta property="og:url" content="http://example.com/index.html">
+<meta property="og:url" content="http://example.com/page/2/index.html">
 <meta property="og:site_name" content="楠佐律佑">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:author" content="John Doe">
@@ -224,15 +224,15 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2023/02/01/00.Git%20%E7%AE%80%E4%BB%8B/" target="_self">
-          00.Git 简介
+        <a href="/2023/02/01/03.Git%20%E5%B7%A5%E4%BD%9C%E5%8C%BA%E3%80%81%E6%9A%82%E5%AD%98%E5%8C%BA%E5%92%8C%E7%89%88%E6%9C%AC%E5%BA%93/" target="_self">
+          03.Git 工作区、暂存区和版本库
         </a>
       </h1>
 
       
-      <a class="index-excerpt index-excerpt__noimg" href="/2023/02/01/00.Git%20%E7%AE%80%E4%BB%8B/" target="_self">
+      <a class="index-excerpt index-excerpt__noimg" href="/2023/02/01/03.Git%20%E5%B7%A5%E4%BD%9C%E5%8C%BA%E3%80%81%E6%9A%82%E5%AD%98%E5%8C%BA%E5%92%8C%E7%89%88%E6%9C%AC%E5%BA%93/" target="_self">
         <div>
-          Git 是 Linus Torvalds 为了帮助管理 Linux 内核开发而开发的一个分布式开放源码的版本控制软件。用于敏捷高效地处理任何或小或大的项目。同类型的其他版本控制工具有 CVS, Subversion（SVN）。GIT不仅仅是个版本控制系统，它也是个内容管理系统(CMS),工作管理系统等 Git 完整命令手册地址：http://git-scm.com/docs PDF 版命令手册：g
+          基本概念 工作区：就是你在电脑里能看到的目录 暂存区：英文叫stage, 或index。一般存放在”git目录”下的index文件（.git&#x2F;index）中，所以我们把暂存区有时也叫作索引（index） 版本库：工作区有一个隐藏目录.git，这个不算工作区，而是Git的版本库     下面这个图展示了工作区、版本库中的暂存区和版本库之间的关系：  图中左侧为工作区，右侧为版本库。在版本库
         </div>
       </a>
 
@@ -240,7 +240,7 @@
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2023-02-01 16:53" pubdate>
+            <time datetime="2023-02-01 16:50" pubdate>
               2023-02-01
             </time>
           </div>
@@ -285,15 +285,15 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2023/02/01/04.Git%20%E5%88%9B%E5%BB%BA%E4%BB%93%E5%BA%93/" target="_self">
-          04.Git 创建仓库
+        <a href="/2023/02/01/02.Git%20%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%A8%8B/" target="_self">
+          02.Git 工作流程
         </a>
       </h1>
 
       
-      <a class="index-excerpt index-excerpt__noimg" href="/2023/02/01/04.Git%20%E5%88%9B%E5%BB%BA%E4%BB%93%E5%BA%93/" target="_self">
+      <a class="index-excerpt index-excerpt__noimg" href="/2023/02/01/02.Git%20%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%A8%8B/" target="_self">
         <div>
-          使用一个已经存在的目录作为Git仓库或创建一个空目录 使用您当前目录作为Git仓库，我们只需使它初始化。 12git init  使用我们指定目录作为Git仓库。 12git init newrepo  初始化后，在当前目录下会出现一个名为 .git 的目录，所有 Git 需要的数据和资源都存放在这个目录中。 如果当前目录下有几个文件想要纳入版本控制，需要先用 git add 命令告诉 Git 开
+          一般工作流程如下：  克隆 Git 资源作为工作目录。 在克隆的资源上添加或修改文件。 如果其他人修改了，你可以更新资源。 在提交前查看修改。 提交修改。 在修改完成后，如果发现错误，可以撤回提交并再次修改并提交。  下图展示了 Git 的工作流程：
         </div>
       </a>
 
@@ -301,7 +301,7 @@
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2023-02-01 16:53" pubdate>
+            <time datetime="2023-02-01 16:50" pubdate>
               2023-02-01
             </time>
           </div>
@@ -346,15 +346,15 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2023/02/01/14.Git%20%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/" target="_self">
-          14.Git 常见问题
+        <a href="/2023/02/01/01.Git%20%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/" target="_self">
+          01.Git 安装配置
         </a>
       </h1>
 
       
-      <a class="index-excerpt index-excerpt__noimg" href="/2023/02/01/14.Git%20%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/" target="_self">
+      <a class="index-excerpt index-excerpt__noimg" href="/2023/02/01/01.Git%20%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/" target="_self">
         <div>
-          1.Git 配置错误仔细检查 本地 用户名称  邮箱账号 及是否使用 Github 中注册邮箱生成密钥，并在 Github 中添加。 2.fatal: detected dubious ownership in repository 问题解决问题的根源在于文件夹的所有权人和现在的用户不一致导致git提示。 临时解决办：，复制报错提示命令行，再次运行 永久解决办法：在文件夹的属性里面，更改所有者，并
+          Git 各平台安装包下载地址为：http://git-scm.com/downloads Linux 平台上安装Git 的工作需要调用 curl，zlib，openssl，expat，libiconv 等库的代码，所以需要先安装这些依赖工具。 在有 yum 的系统上（比如 Fedora）或者有 apt-get 的系统上（比如 Debian 体系），可以用下面的命令安装： Debian&#x2F;U
         </div>
       </a>
 
@@ -362,7 +362,7 @@
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2023-02-01 16:53" pubdate>
+            <time datetime="2023-02-01 16:49" pubdate>
               2023-02-01
             </time>
           </div>
@@ -407,15 +407,15 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2023/02/01/10.Git%20%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA/" target="_self">
-          10.Git 服务器搭建
+        <a href="/2023/02/01/08.Git%20%E6%A0%87%E7%AD%BE/" target="_self">
+          08.Git 标签
         </a>
       </h1>
 
       
-      <a class="index-excerpt index-excerpt__noimg" href="/2023/02/01/10.Git%20%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA/" target="_self">
+      <a class="index-excerpt index-excerpt__noimg" href="/2023/02/01/08.Git%20%E6%A0%87%E7%AD%BE/" target="_self">
         <div>
-          上一章节中我们远程仓库使用了 Github，Github 公开的项目是免费的，但是如果你不想让其他人看到你的项目就需要收费。 这时我们就需要自己搭建一台Git服务器作为私有仓库使用。 接下来我们将以 Centos 为例搭建 Git 服务器。 1、安装Git123$ yum install curl-devel expat-devel gettext-devel openssl-devel zlib
+          如果你达到一个重要的阶段，并希望永远记住那个特别的提交快照，你可以使用 git tag 给它打上标签。 比如说，我们想为我们的 w3cschoolcc 项目发布一个”1.0”版本。 我们可以用 git tag -a v1.0 命令给最新一次提交打上（HEAD）”v1.0”的标签。 -a 选项意为”创建一个带注解的标签”。 不用 -a 选项也可以执行的，但它不会记录这标签是啥时候打的，谁打的，也不会
         </div>
       </a>
 
@@ -423,7 +423,7 @@
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2023-02-01 16:52" pubdate>
+            <time datetime="2023-02-01 16:49" pubdate>
               2023-02-01
             </time>
           </div>
@@ -468,15 +468,15 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2023/02/01/11.Git%20%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E9%80%9F%E6%9F%A5%E8%A1%A8/" target="_self">
-          11.Git 常用命令速查表
+        <a href="/2023/02/01/07.Git%20%E6%9F%A5%E7%9C%8B%E6%8F%90%E4%BA%A4%E5%8E%86%E5%8F%B2/" target="_self">
+          07.Git 查看提交历史.md
         </a>
       </h1>
 
       
-      <a class="index-excerpt index-excerpt__noimg" href="/2023/02/01/11.Git%20%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E9%80%9F%E6%9F%A5%E8%A1%A8/" target="_self">
+      <a class="index-excerpt index-excerpt__noimg" href="/2023/02/01/07.Git%20%E6%9F%A5%E7%9C%8B%E6%8F%90%E4%BA%A4%E5%8E%86%E5%8F%B2/" target="_self">
         <div>
-          创建 | CREATE $ git clone ssh://user@domain.com/xx.git 克隆远程仓库 $ git init 初始化本地 git 仓库（新建仓库）  本地更改 | LOCAL CHANGES $ git status 查看当前版本状态（是否修改） $ git diff 显示所有未添加至 index 的变更 $ git diff HEAD 查看已缓存的与未缓存的所有
+          在使用 Git 提交了若干更新之后，又或者克隆了某个项目，想回顾下提交历史，我们可以使用 git log 命令查看。 针对我们前一章节的操作，使用 git log 命令列出历史提交记录如下： 1234567891011121314151617181920212223242526272829$ git logcommit 88afe0e02adcdfea6844bb627de97da21eb10af
         </div>
       </a>
 
@@ -484,7 +484,7 @@
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2023-02-01 16:52" pubdate>
+            <time datetime="2023-02-01 16:48" pubdate>
               2023-02-01
             </time>
           </div>
@@ -529,15 +529,15 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2023/02/01/12.Git%20%E5%88%86%E6%94%AF%E7%AD%96%E7%95%A5/" target="_self">
-          12.Git 分支策略
+        <a href="/2023/02/01/Slurm-%E4%BD%9C%E4%B8%9A%E8%B0%83%E5%BA%A6%E7%B3%BB%E7%BB%9F%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/" target="_self">
+          SLURM使用教程
         </a>
       </h1>
 
       
-      <a class="index-excerpt index-excerpt__noimg" href="/2023/02/01/12.Git%20%E5%88%86%E6%94%AF%E7%AD%96%E7%95%A5/" target="_self">
+      <a class="index-excerpt index-excerpt__noimg" href="/2023/02/01/Slurm-%E4%BD%9C%E4%B8%9A%E8%B0%83%E5%BA%A6%E7%B3%BB%E7%BB%9F%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/" target="_self">
         <div>
-          本文将展示我一年前在自己的项目中成功运用的开发模型。我一直打算把这些东西写出来，但总是没有抽出时间，现在终于写好了。这里介绍的不是任何项目的细节，而是有关分支的策略以及对发布的管理。  在我的演示中，所有的操作都是通过 git 完成的。 为什么选择 git ？为了了断 git 和中心源代码控制系统的比较和争论，请移步这里看看 链接1 链接2。作为一个开发者，我喜欢 git 超过其它任何现有的工具。
+          SLURM使用教程常用术语 user：用户名 node：计算节点 core：cpu核 job：作业 job step：作业步，单个作业可以有多个作业步 partition：分区，作业需在特定分区中运行 QOS：服务质量，可理解为用户可使用的CPU、内存等资源限制 tasks：任务数，默认一个任务使用一个cpu核，可理解为作业所需的cpu核数 socket：cpu插槽，可理解为物理cpu颗数 std
         </div>
       </a>
 
@@ -545,7 +545,7 @@
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2023-02-01 16:52" pubdate>
+            <time datetime="2023-02-01 16:08" pubdate>
               2023-02-01
             </time>
           </div>
@@ -561,8 +561,15 @@
     
       <span class="category-chain">
         
-  <a href="/categories/Git/" class="category-chain-item">Git</a>
+  <a href="/categories/Linux/" class="category-chain-item">Linux</a>
   
+  
+    <span>></span>
+    
+  <a href="/categories/Linux/Slurm/" class="category-chain-item">Slurm</a>
+  
+  
+
   
 
       </span>
@@ -576,7 +583,7 @@
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/%E6%90%AC%E8%BF%90/">#搬运</a>
+              <a href="/tags/%E5%8E%9F%E5%88%9B/">#原创</a>
             
           </div>
         
@@ -590,15 +597,15 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2023/02/01/13.Git%20%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" target="_self">
-          13.Git 常用命令
+        <a href="/2023/02/01/hello-world/" target="_self">
+          Hello World
         </a>
       </h1>
 
       
-      <a class="index-excerpt index-excerpt__noimg" href="/2023/02/01/13.Git%20%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" target="_self">
+      <a class="index-excerpt index-excerpt__noimg" href="/2023/02/01/hello-world/" target="_self">
         <div>
-          Git clone命令用法git clone是git中常用的命令，其作用是将存储库克隆到新目录中。为克隆的存储库中的每个分支创建远程跟踪分支(使用git branch -r可见)，并从克隆检出的存储库作为当前活动分支的初始分支。 在克隆之后，没有参数的普通git提取将更新所有远程跟踪分支，并且没有参数的git pull将另外将远程主分支合并到当前主分支(如果有的话)。 此默认配置通过在refs&#
+          Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick
         </div>
       </a>
 
@@ -606,223 +613,12 @@
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2023-02-01 16:52" pubdate>
+            <time datetime="2023-02-01 15:13" pubdate>
               2023-02-01
             </time>
           </div>
         
         
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/Git/" class="category-chain-item">Git</a>
-  
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/%E6%90%AC%E8%BF%90/">#搬运</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2023/02/01/06.Git%20%E5%88%86%E6%94%AF%E7%AE%A1%E7%90%86/" target="_self">
-          06. Git 分支管理
-        </a>
-      </h1>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2023/02/01/06.Git%20%E5%88%86%E6%94%AF%E7%AE%A1%E7%90%86/" target="_self">
-        <div>
-          几乎每一种版本控制系统都以某种形式支持分支。使用分支意味着你可以从开发主线上分离开来，然后在不影响主线的同时继续工作。 创建分支命令： 1git branch (branchname)  切换分支命令: 1git checkout (branchname)  当你切换分支的时候，Git 会用该分支的最后提交的快照替换你的工作目录的内容， 所以多个分支不需要多个目录。 合并分支命令: 1git me
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2023-02-01 16:51" pubdate>
-              2023-02-01
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/Git/" class="category-chain-item">Git</a>
-  
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/%E6%90%AC%E8%BF%90/">#搬运</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2023/02/01/05.Git%20%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/" target="_self">
-          05.Git 基本操作
-        </a>
-      </h1>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2023/02/01/05.Git%20%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/" target="_self">
-        <div>
-          Git 的工作就是创建和保存你的项目的快照及与之后的快照进行对比。 获取与创建项目命令git init用 git init 在目录中创建新的 Git 仓库。 你可以在任何时候、任何目录中这么做，完全是本地化的。 在目录中执行 git init，就可以创建一个 Git 仓库了。比如我们创建 w3cschoolcc 项目： 12345$ mkdir w3cschoolcc$ cd w3cschoolc
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2023-02-01 16:51" pubdate>
-              2023-02-01
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/Git/" class="category-chain-item">Git</a>
-  
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/%E6%90%AC%E8%BF%90/">#搬运</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2023/02/01/09.Git%20%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93/" target="_self">
-          09.Git 远程仓库
-        </a>
-      </h1>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2023/02/01/09.Git%20%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93/" target="_self">
-        <div>
-          Git 并不像 SVN 那样有个中心服务器。 目前我们使用到的 Git 命令都是在本地执行，如果你想通过 Git 分享你的代码或者与其他开发人员合作。 你就需要将数据放到一台其他开发人员能够连接的服务器上。 本例使用了 Github 作为远程仓库，你可以先阅读我们的 Github 简明教程。 添加远程库要添加一个新的远程仓库，可以指定一个简单的名字，以便将来引用,命令格式如下： 12git rem
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2023-02-01 16:51" pubdate>
-              2023-02-01
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/Git/" class="category-chain-item">Git</a>
-  
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/%E6%90%AC%E8%BF%90/">#搬运</a>
-            
-          </div>
         
       </div>
     </article>
@@ -832,7 +628,7 @@
 
   <nav aria-label="navigation">
     <span class="pagination" id="pagination">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/#board">2</a><a class="extend next" rel="next" href="/page/2/#board"><i class="iconfont icon-arrowright"></i></a>
+      <a class="extend prev" rel="prev" href="/"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
     </span>
   </nav>
 

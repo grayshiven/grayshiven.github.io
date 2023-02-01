@@ -16,28 +16,24 @@
   <meta name="author" content="John Doe">
   <meta name="keywords" content="">
   
-    <meta name="description" content="SLURM使用教程常用术语 user：用户名 node：计算节点 core：cpu核 job：作业 job step：作业步，单个作业可以有多个作业步 partition：分区，作业需在特定分区中运行 QOS：服务质量，可理解为用户可使用的CPU、内存等资源限制 tasks：任务数，默认一个任务使用一个cpu核，可理解为作业所需的cpu核数 socket：cpu插槽，可理解为物理cpu颗数 std">
+    <meta name="description" content="创建 | CREATE $ git clone ssh:&#x2F;&#x2F;user@domain.com&#x2F;xx.git 克隆远程仓库 $ git init 初始化本地 git 仓库（新建仓库）  本地更改 | LOCAL CHANGES $ git status 查看当前版本状态（是否修改） $ git diff 显示所有未添加至 index 的变更 $ git diff HEAD 查看已缓存的与未缓存的所有">
 <meta property="og:type" content="article">
-<meta property="og:title" content="SLURM使用教程">
-<meta property="og:url" content="http://example.com/2023/02/01/Slurm-%E4%BD%9C%E4%B8%9A%E8%B0%83%E5%BA%A6%E7%B3%BB%E7%BB%9F%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/index.html">
+<meta property="og:title" content="11.Git 常用命令速查表">
+<meta property="og:url" content="http://example.com/2023/02/01/11.Git%20%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E9%80%9F%E6%9F%A5%E8%A1%A8/index.html">
 <meta property="og:site_name" content="楠佐律佑">
-<meta property="og:description" content="SLURM使用教程常用术语 user：用户名 node：计算节点 core：cpu核 job：作业 job step：作业步，单个作业可以有多个作业步 partition：分区，作业需在特定分区中运行 QOS：服务质量，可理解为用户可使用的CPU、内存等资源限制 tasks：任务数，默认一个任务使用一个cpu核，可理解为作业所需的cpu核数 socket：cpu插槽，可理解为物理cpu颗数 std">
+<meta property="og:description" content="创建 | CREATE $ git clone ssh:&#x2F;&#x2F;user@domain.com&#x2F;xx.git 克隆远程仓库 $ git init 初始化本地 git 仓库（新建仓库）  本地更改 | LOCAL CHANGES $ git status 查看当前版本状态（是否修改） $ git diff 显示所有未添加至 index 的变更 $ git diff HEAD 查看已缓存的与未缓存的所有">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://example.com/20230201154541049/20230201035423129.png">
-<meta property="og:image" content="http://example.com/20230201154541049/20230201035533330.png">
-<meta property="og:image" content="http://example.com/20230201154541049/20230201035616729.png">
-<meta property="og:image" content="http://example.com/20230201154541049/20230201035711947.png">
-<meta property="og:image" content="http://example.com/20230201154541049/20230201035739038.png">
-<meta property="article:published_time" content="2023-02-01T08:08:30.000Z">
-<meta property="article:modified_time" content="2023-02-01T08:11:58.038Z">
+<meta property="og:image" content="https://atts.w3cschool.cn/attachments/image/20191225/1577243564858376.png">
+<meta property="article:published_time" content="2023-02-01T08:52:30.000Z">
+<meta property="article:modified_time" content="2023-02-01T09:02:27.465Z">
 <meta property="article:author" content="John Doe">
-<meta property="article:tag" content="原创">
+<meta property="article:tag" content="搬运">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="http://example.com/20230201154541049/20230201035423129.png">
+<meta name="twitter:image" content="https://atts.w3cschool.cn/attachments/image/20191225/1577243564858376.png">
   
   
   
-  <title>SLURM使用教程 - 楠佐律佑</title>
+  <title>11.Git 常用命令速查表 - 楠佐律佑</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -203,7 +199,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="SLURM使用教程"></span>
+            <span id="subtitle" data-typed-text="11.Git 常用命令速查表"></span>
           
         </div>
 
@@ -214,7 +210,7 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-02-01 16:08" pubdate>
+        <time datetime="2023-02-01 16:52" pubdate>
           2023年2月1日 下午
         </time>
       </span>
@@ -275,94 +271,69 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">SLURM使用教程</h1>
+            <h1 style="display: none">11.Git 常用命令速查表</h1>
             
             
               <div class="markdown-body">
                 
-                <h1 id="SLURM使用教程"><a href="#SLURM使用教程" class="headerlink" title="SLURM使用教程"></a>SLURM使用教程</h1><h2 id="常用术语"><a href="#常用术语" class="headerlink" title="常用术语"></a>常用术语</h2><ul>
-<li>user：用户名</li>
-<li>node：计算节点</li>
-<li>core：cpu核</li>
-<li>job：作业</li>
-<li>job step：作业步，单个作业可以有多个作业步</li>
-<li>partition：分区，作业需在特定分区中运行</li>
-<li>QOS：服务质量，可理解为用户可使用的CPU、内存等资源限制</li>
-<li>tasks：任务数，默认一个任务使用一个cpu核，可理解为作业所需的cpu核数</li>
-<li>socket：cpu插槽，可理解为物理cpu颗数</li>
-<li>stdout：标准输出文件，程序运行正常时输出信息的文件，一般指输出到屏幕的信息</li>
-<li>stderr：标准错误文件，程序运行出错时输出信息的文件，一般指输出到屏幕的信息</li>
-</ul>
-<h2 id="命令"><a href="#命令" class="headerlink" title="命令"></a>命令</h2><ul>
-<li>sbatch：提交作业脚本。此脚本一般会包含一个或多个srun命令启动并行任务</li>
-<li>sinfo：显示分区或节点状态，可以通过参数选项进行过滤、和排序</li>
-<li>squeue：显示队列的作业及作业状态</li>
-<li>scancel：取消排队或运行中的作业</li>
-<li>scontrol：显示或设定slurm作业、分区、节点等状态</li>
-<li>sacctmgr：显示和设置账户关联的QOS等信息</li>
-<li>sacct：显示历史作业信息</li>
-<li>srun：运行并行作业，具有多个选项，如：最大和最小节点数、处理器数、是否指定和排除节点</li>
-</ul>
-<h2 id="节点状态查看"><a href="#节点状态查看" class="headerlink" title="节点状态查看"></a>节点状态查看</h2><p><code>sinfo</code><br><img src="/20230201154541049/20230201035423129.png" srcset="/img/loading.gif" lazyload></p>
-<ul>
-<li>PARRITION：节点所在分区</li>
-<li>AVAIL：分区状态，up标识可用，down标识不可用</li>
-<li>TIMELIMIT：程序运行最大时长，infinite表示不限制，如果限制格式为days-houres:minutes:seconds</li>
-<li>NODES：节点数</li>
-<li>NODELIST：节点名列表</li>
-<li>STATE：节点状态，可能的状态包括：</li>
-<li>allocated、alloc ：已分配</li>
-<li>completing、comp：完成中</li>
-<li>down：宕机</li>
-<li>drained、drain：已失去活力</li>
-<li>fail：失效</li>
-<li>idle：空闲</li>
-<li>mixed：混合，节点在运行作业，但有些空闲CPU核，可接受新作业</li>
-<li>reserved、resv：资源预留</li>
-<li>unknown、unk：未知原因</li>
-</ul>
-<p>如果状态带有后缀*，表示节点没有响应</p>
-<h2 id="分区信息查看"><a href="#分区信息查看" class="headerlink" title="分区信息查看"></a>分区信息查看</h2><p><img src="/20230201154541049/20230201035533330.png" srcset="/img/loading.gif" lazyload></p>
-<p>DisableRootJobs:不允许root提交作业</p>
-<p>Maxtime：最大运行时间</p>
-<p>LLN：是否按最小负载节点调度</p>
-<p>Maxnodes：最大节点数</p>
-<p>Hidden：是否为隐藏分区</p>
-<p>Default：是否为默认分区</p>
-<p>OverSubscribe：是否允许超时</p>
-<p>ExclusiveUser：排除的用户</p>
-<h2 id="作业信息查看"><a href="#作业信息查看" class="headerlink" title="作业信息查看"></a>作业信息查看</h2><p><img src="/20230201154541049/20230201035616729.png" srcset="/img/loading.gif" lazyload></p>
-<ul>
-<li>JOBID：作业号</li>
-<li>PARITION：分区名</li>
-<li>NAME：作业名</li>
-<li>USER：用户名</li>
-<li>ST：状态，常见的状态包括：</li>
-<li>PD、Q：排队中 ，PENDING</li>
-<li>R：运行中 ，RUNNING</li>
-<li>CA：已取消，CANCELLED</li>
-<li>CG：完成中，COMPLETIONG</li>
-<li>F：已失败，FAILED</li>
-<li>TO：超时，TIMEOUT</li>
-<li>NF：节点失效，NODE FAILURE</li>
-<li>CD：已完成，COMPLETED<br><img src="/20230201154541049/20230201035711947.png" srcset="/img/loading.gif" lazyload></li>
-</ul>
-<p>批处理模式提交作业<br>1.用户编写作业脚本</p>
-<p>2.提交作业</p>
-<p>3.作业排队等待资源分配</p>
-<p>4.在首节点加载执行作业脚本</p>
-<p>5.脚本执行结束，释放资源</p>
-<p>6.用户在输出文件中查看运行结果</p>
-<p><img src="/20230201154541049/20230201035739038.png" srcset="/img/loading.gif" lazyload></p>
-<ul>
-<li>作业脚本为文本文件，首行一“#!”开头，指定解释程序</li>
-<li>脚本中可通过srun加载计算任务</li>
-<li>一个作业可包含多个作业步</li>
-<li>脚本在管理节点上提交，实际在计算节点上执行</li>
-<li>脚本输出写到输出文件中</li>
-</ul>
-<p>以下是一些常见的作业资源需求参数，使用#SBATCH -xx xxx的方式写入脚本中即可</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs css">-J,<span class="hljs-attr">--job-name</span>：指定作业名称<br>-N,<span class="hljs-attr">--nodes</span>：节点数量<br>-n,<span class="hljs-attr">--ntasks</span>：使用的CPU核数<br><span class="hljs-attr">--mem</span>：指定每个节点上使用的物理内存<br>-t,<span class="hljs-attr">--time</span>：运行时间，超出时间限制的作业将被终止<br>-<span class="hljs-selector-tag">p</span>,<span class="hljs-attr">--partition</span>：指定分区<br><span class="hljs-attr">--reservation</span>：资源预留<br>-w,<span class="hljs-attr">--nodelist</span>：指定节点运行作业<br>-x,<span class="hljs-attr">--exclude</span>：分配给作业的节点中不要包含指定节点<br><span class="hljs-attr">--ntasks-per-node</span>：指定每个节点使用几个CPU核心<br><span class="hljs-attr">--begin</span>：指定作业开始时间<br>-D，<span class="hljs-attr">--chdir</span>：指定脚本/命令的工作目录<br></code></pre></td></tr></table></figure>
+                <p><img src="https://atts.w3cschool.cn/attachments/image/20191225/1577243564858376.png" srcset="/img/loading.gif" lazyload alt="git速查表下载app" title="git速查表下载app"></p>
+<h2 id="创建-CREATE"><a href="#创建-CREATE" class="headerlink" title="创建 | CREATE"></a>创建 | CREATE</h2><hr>
+<pre><code class="hljs">$ git clone ssh://user@domain.com/xx.git 克隆远程仓库
+$ git init 初始化本地 git 仓库（新建仓库）
+</code></pre>
+<h2 id="本地更改-LOCAL-CHANGES"><a href="#本地更改-LOCAL-CHANGES" class="headerlink" title="本地更改 | LOCAL CHANGES"></a>本地更改 | LOCAL CHANGES</h2><hr>
+<pre><code class="hljs">$ git status 查看当前版本状态（是否修改）
+$ git diff 显示所有未添加至 index 的变更
+$ git diff HEAD 查看已缓存的与未缓存的所有改动
+$ git add &lt;path&gt; 将该文件添加到缓存
+$ git commit -m ‘xxx’ 提交
+$ git commit --amend -m ‘xxx’ 合并上一次提交（用于反复修改）
+$ git commit -am ‘xxx’ 将 add 和 commit 合为一步
+</code></pre>
+<h2 id="提交历史记录-COMMIT-HISTORY"><a href="#提交历史记录-COMMIT-HISTORY" class="headerlink" title="提交历史记录 | COMMIT HISTORY"></a>提交历史记录 | COMMIT HISTORY</h2><hr>
+<pre><code class="hljs">$ git log 显示日志
+$ git show &lt;commit&gt; 显示某个提交的详细内容
+$ git blame &lt;file&gt; 在每一行显示 commit 号,提交者,最早提交日期
+</code></pre>
+<h2 id="分支机构和标签-BRANCHES-amp-TAGS"><a href="#分支机构和标签-BRANCHES-amp-TAGS" class="headerlink" title="分支机构和标签 | BRANCHES &amp; TAGS"></a>分支机构和标签 | BRANCHES &amp; TAGS</h2><hr>
+<pre><code class="hljs">$ git branch 显示本地分支
+$ git checkout &lt;branch&gt; 切换分支
+$ git branch &lt;new-branch&gt; 新建分支
+$ git branch --track &lt;new&gt; &lt;remote&gt; 创建新分支跟踪远程分支
+$ git branch -d &lt;branch&gt; 删除本地分支
+$ git tag &lt;tag-name&gt; 给当前分支打标签
+</code></pre>
+<h2 id="更新和发布-UPDATE-amp-PUBLISH"><a href="#更新和发布-UPDATE-amp-PUBLISH" class="headerlink" title="更新和发布 | UPDATE &amp; PUBLISH"></a>更新和发布 | UPDATE &amp; PUBLISH</h2><hr>
+<pre><code class="hljs">$ git remote -v 列出远程分支详细信息
+$ git remote show &lt;remote&gt; 显示某个分支信息
+$ git remote add &lt;remote&gt; &lt;url&gt; 添加一个新的远程仓库
+$ git fetch &lt;remote&gt; 获取远程分支，但不更新本地分支，另需 merge
+$ git pull &lt;remote&gt; &lt;branch&gt; 获取远程分支，并更新本地分支
+$ git push &lt;remote&gt; &lt;branch&gt; 推送本地更新到远程分支
+$ git push &lt;remote&gt; --delete &lt;branch&gt; 删除一个远程分支
+$ git push --tags 推送本地标签
+</code></pre>
+<h2 id="合并与衍合-MERGE-amp-REBASE"><a href="#合并与衍合-MERGE-amp-REBASE" class="headerlink" title="合并与衍合 | MERGE &amp; REBASE"></a>合并与衍合 | MERGE &amp; REBASE</h2><hr>
+<pre><code class="hljs">$ git merge &lt;branch&gt; 合并分支到当前分支，存在两个
+$ git rebase &lt;branch&gt; 合并分支到当前分支，存在一个
+$ git rebase --abort 回到执行 rebase 之前
+$ git rebase --continue 解决矛盾后继续执行 rebase
+$ git mergetool 使用 mergetool 解决冲突
+$ git add &lt;resolve-file&gt; 使用冲突文件解决冲突
+$ git rm &lt;resolved-file&gt;
+</code></pre>
+<h2 id="撤消-UNDO"><a href="#撤消-UNDO" class="headerlink" title="撤消 | UNDO"></a>撤消 | UNDO</h2><hr>
+<pre><code class="hljs">$ git reset --hard HEAD 将当前版本重置为 HEAD（用于 merge 失败）
+$ git reset --hard &lt;commit&gt; 将当前版本重置至某一个提交状态(慎用!)
+$ git reset &lt;commit&gt; 将当前版本重置至某一个提交状态，代码不变
+$ git reset --merge &lt;commit&gt; 重置至某一状态,保留版本库中不同的文件
+$ git reset --keep &lt;commit&gt; 重置至某一状态,重置变化的文件,代码改变
+$ git checkout HEAD &lt;file&gt; 丢弃本地更改信息并将其存入特定文件
+$ git revert &lt;commit&gt; 撤消提交
+</code></pre>
+<h2 id="帮助-HELP帮助-HELP"><a href="#帮助-HELP帮助-HELP" class="headerlink" title="帮助 | HELP帮助 | HELP"></a>帮助 | HELP帮助 | HELP</h2><hr>
+<pre><code class="hljs">$ git help &lt;command&gt;  获取命令行上的帮助
+</code></pre>
 
                 
               </div>
@@ -381,15 +352,8 @@
     
       <span class="category-chain">
         
-  <a href="/categories/Linux/" class="category-chain-item">Linux</a>
+  <a href="/categories/Git/" class="category-chain-item">Git</a>
   
-  
-    <span>></span>
-    
-  <a href="/categories/Linux/Slurm/" class="category-chain-item">Slurm</a>
-  
-  
-
   
 
       </span>
@@ -403,7 +367,7 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/%E5%8E%9F%E5%88%9B/">#原创</a>
+        <a href="/tags/%E6%90%AC%E8%BF%90/">#搬运</a>
       
     </div>
   
@@ -415,8 +379,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>SLURM使用教程</div>
-      <div>http://example.com/2023/02/01/Slurm-作业调度系统使用笔记/</div>
+      <div>11.Git 常用命令速查表</div>
+      <div>http://example.com/2023/02/01/11.Git 常用命令速查表/</div>
     </div>
     <div class="license-meta">
       
@@ -460,9 +424,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/02/01/07.Git%20%E6%9F%A5%E7%9C%8B%E6%8F%90%E4%BA%A4%E5%8E%86%E5%8F%B2/" title="07.Git 查看提交历史.md">
+                      <a href="/2023/02/01/10.Git%20%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA/" title="10.Git 服务器搭建">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">07.Git 查看提交历史.md</span>
+                        <span class="hidden-mobile">10.Git 服务器搭建</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -470,8 +434,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2023/02/01/hello-world/" title="Hello World">
-                        <span class="hidden-mobile">Hello World</span>
+                      <a href="/2023/02/01/12.Git%20%E5%88%86%E6%94%AF%E7%AD%96%E7%95%A5/" title="12.Git 分支策略">
+                        <span class="hidden-mobile">12.Git 分支策略</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

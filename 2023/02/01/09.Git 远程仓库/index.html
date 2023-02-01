@@ -16,28 +16,27 @@
   <meta name="author" content="John Doe">
   <meta name="keywords" content="">
   
-    <meta name="description" content="SLURM使用教程常用术语 user：用户名 node：计算节点 core：cpu核 job：作业 job step：作业步，单个作业可以有多个作业步 partition：分区，作业需在特定分区中运行 QOS：服务质量，可理解为用户可使用的CPU、内存等资源限制 tasks：任务数，默认一个任务使用一个cpu核，可理解为作业所需的cpu核数 socket：cpu插槽，可理解为物理cpu颗数 std">
+    <meta name="description" content="Git 并不像 SVN 那样有个中心服务器。 目前我们使用到的 Git 命令都是在本地执行，如果你想通过 Git 分享你的代码或者与其他开发人员合作。 你就需要将数据放到一台其他开发人员能够连接的服务器上。 本例使用了 Github 作为远程仓库，你可以先阅读我们的 Github 简明教程。 添加远程库要添加一个新的远程仓库，可以指定一个简单的名字，以便将来引用,命令格式如下： 12git rem">
 <meta property="og:type" content="article">
-<meta property="og:title" content="SLURM使用教程">
-<meta property="og:url" content="http://example.com/2023/02/01/Slurm-%E4%BD%9C%E4%B8%9A%E8%B0%83%E5%BA%A6%E7%B3%BB%E7%BB%9F%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/index.html">
+<meta property="og:title" content="09.Git 远程仓库">
+<meta property="og:url" content="http://example.com/2023/02/01/09.Git%20%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93/index.html">
 <meta property="og:site_name" content="楠佐律佑">
-<meta property="og:description" content="SLURM使用教程常用术语 user：用户名 node：计算节点 core：cpu核 job：作业 job step：作业步，单个作业可以有多个作业步 partition：分区，作业需在特定分区中运行 QOS：服务质量，可理解为用户可使用的CPU、内存等资源限制 tasks：任务数，默认一个任务使用一个cpu核，可理解为作业所需的cpu核数 socket：cpu插槽，可理解为物理cpu颗数 std">
+<meta property="og:description" content="Git 并不像 SVN 那样有个中心服务器。 目前我们使用到的 Git 命令都是在本地执行，如果你想通过 Git 分享你的代码或者与其他开发人员合作。 你就需要将数据放到一台其他开发人员能够连接的服务器上。 本例使用了 Github 作为远程仓库，你可以先阅读我们的 Github 简明教程。 添加远程库要添加一个新的远程仓库，可以指定一个简单的名字，以便将来引用,命令格式如下： 12git rem">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://example.com/20230201154541049/20230201035423129.png">
-<meta property="og:image" content="http://example.com/20230201154541049/20230201035533330.png">
-<meta property="og:image" content="http://example.com/20230201154541049/20230201035616729.png">
-<meta property="og:image" content="http://example.com/20230201154541049/20230201035711947.png">
-<meta property="og:image" content="http://example.com/20230201154541049/20230201035739038.png">
-<meta property="article:published_time" content="2023-02-01T08:08:30.000Z">
-<meta property="article:modified_time" content="2023-02-01T08:11:58.038Z">
+<meta property="og:image" content="https://atts.w3cschool.cn/attachments/day_160929/201609291616226480.png">
+<meta property="og:image" content="https://atts.w3cschool.cn/attachments/day_160929/201609291556118344.png">
+<meta property="og:image" content="https://atts.w3cschool.cn/attachments/day_160929/201609291555152907.png">
+<meta property="og:image" content="https://atts.w3cschool.cn/attachments/day_160929/201609291557318743.png">
+<meta property="article:published_time" content="2023-02-01T08:51:30.000Z">
+<meta property="article:modified_time" content="2023-02-01T09:00:45.174Z">
 <meta property="article:author" content="John Doe">
-<meta property="article:tag" content="原创">
+<meta property="article:tag" content="搬运">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="http://example.com/20230201154541049/20230201035423129.png">
+<meta name="twitter:image" content="https://atts.w3cschool.cn/attachments/day_160929/201609291616226480.png">
   
   
   
-  <title>SLURM使用教程 - 楠佐律佑</title>
+  <title>09.Git 远程仓库 - 楠佐律佑</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -203,7 +202,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="SLURM使用教程"></span>
+            <span id="subtitle" data-typed-text="09.Git 远程仓库"></span>
           
         </div>
 
@@ -214,7 +213,7 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-02-01 16:08" pubdate>
+        <time datetime="2023-02-01 16:51" pubdate>
           2023年2月1日 下午
         </time>
       </span>
@@ -226,7 +225,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.6k 字
+          1.5k 字
         
       </span>
     
@@ -237,7 +236,7 @@
         
         
         
-          14 分钟
+          13 分钟
         
       </span>
     
@@ -275,94 +274,41 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">SLURM使用教程</h1>
+            <h1 style="display: none">09.Git 远程仓库</h1>
             
             
               <div class="markdown-body">
                 
-                <h1 id="SLURM使用教程"><a href="#SLURM使用教程" class="headerlink" title="SLURM使用教程"></a>SLURM使用教程</h1><h2 id="常用术语"><a href="#常用术语" class="headerlink" title="常用术语"></a>常用术语</h2><ul>
-<li>user：用户名</li>
-<li>node：计算节点</li>
-<li>core：cpu核</li>
-<li>job：作业</li>
-<li>job step：作业步，单个作业可以有多个作业步</li>
-<li>partition：分区，作业需在特定分区中运行</li>
-<li>QOS：服务质量，可理解为用户可使用的CPU、内存等资源限制</li>
-<li>tasks：任务数，默认一个任务使用一个cpu核，可理解为作业所需的cpu核数</li>
-<li>socket：cpu插槽，可理解为物理cpu颗数</li>
-<li>stdout：标准输出文件，程序运行正常时输出信息的文件，一般指输出到屏幕的信息</li>
-<li>stderr：标准错误文件，程序运行出错时输出信息的文件，一般指输出到屏幕的信息</li>
-</ul>
-<h2 id="命令"><a href="#命令" class="headerlink" title="命令"></a>命令</h2><ul>
-<li>sbatch：提交作业脚本。此脚本一般会包含一个或多个srun命令启动并行任务</li>
-<li>sinfo：显示分区或节点状态，可以通过参数选项进行过滤、和排序</li>
-<li>squeue：显示队列的作业及作业状态</li>
-<li>scancel：取消排队或运行中的作业</li>
-<li>scontrol：显示或设定slurm作业、分区、节点等状态</li>
-<li>sacctmgr：显示和设置账户关联的QOS等信息</li>
-<li>sacct：显示历史作业信息</li>
-<li>srun：运行并行作业，具有多个选项，如：最大和最小节点数、处理器数、是否指定和排除节点</li>
-</ul>
-<h2 id="节点状态查看"><a href="#节点状态查看" class="headerlink" title="节点状态查看"></a>节点状态查看</h2><p><code>sinfo</code><br><img src="/20230201154541049/20230201035423129.png" srcset="/img/loading.gif" lazyload></p>
-<ul>
-<li>PARRITION：节点所在分区</li>
-<li>AVAIL：分区状态，up标识可用，down标识不可用</li>
-<li>TIMELIMIT：程序运行最大时长，infinite表示不限制，如果限制格式为days-houres:minutes:seconds</li>
-<li>NODES：节点数</li>
-<li>NODELIST：节点名列表</li>
-<li>STATE：节点状态，可能的状态包括：</li>
-<li>allocated、alloc ：已分配</li>
-<li>completing、comp：完成中</li>
-<li>down：宕机</li>
-<li>drained、drain：已失去活力</li>
-<li>fail：失效</li>
-<li>idle：空闲</li>
-<li>mixed：混合，节点在运行作业，但有些空闲CPU核，可接受新作业</li>
-<li>reserved、resv：资源预留</li>
-<li>unknown、unk：未知原因</li>
-</ul>
-<p>如果状态带有后缀*，表示节点没有响应</p>
-<h2 id="分区信息查看"><a href="#分区信息查看" class="headerlink" title="分区信息查看"></a>分区信息查看</h2><p><img src="/20230201154541049/20230201035533330.png" srcset="/img/loading.gif" lazyload></p>
-<p>DisableRootJobs:不允许root提交作业</p>
-<p>Maxtime：最大运行时间</p>
-<p>LLN：是否按最小负载节点调度</p>
-<p>Maxnodes：最大节点数</p>
-<p>Hidden：是否为隐藏分区</p>
-<p>Default：是否为默认分区</p>
-<p>OverSubscribe：是否允许超时</p>
-<p>ExclusiveUser：排除的用户</p>
-<h2 id="作业信息查看"><a href="#作业信息查看" class="headerlink" title="作业信息查看"></a>作业信息查看</h2><p><img src="/20230201154541049/20230201035616729.png" srcset="/img/loading.gif" lazyload></p>
-<ul>
-<li>JOBID：作业号</li>
-<li>PARITION：分区名</li>
-<li>NAME：作业名</li>
-<li>USER：用户名</li>
-<li>ST：状态，常见的状态包括：</li>
-<li>PD、Q：排队中 ，PENDING</li>
-<li>R：运行中 ，RUNNING</li>
-<li>CA：已取消，CANCELLED</li>
-<li>CG：完成中，COMPLETIONG</li>
-<li>F：已失败，FAILED</li>
-<li>TO：超时，TIMEOUT</li>
-<li>NF：节点失效，NODE FAILURE</li>
-<li>CD：已完成，COMPLETED<br><img src="/20230201154541049/20230201035711947.png" srcset="/img/loading.gif" lazyload></li>
-</ul>
-<p>批处理模式提交作业<br>1.用户编写作业脚本</p>
-<p>2.提交作业</p>
-<p>3.作业排队等待资源分配</p>
-<p>4.在首节点加载执行作业脚本</p>
-<p>5.脚本执行结束，释放资源</p>
-<p>6.用户在输出文件中查看运行结果</p>
-<p><img src="/20230201154541049/20230201035739038.png" srcset="/img/loading.gif" lazyload></p>
-<ul>
-<li>作业脚本为文本文件，首行一“#!”开头，指定解释程序</li>
-<li>脚本中可通过srun加载计算任务</li>
-<li>一个作业可包含多个作业步</li>
-<li>脚本在管理节点上提交，实际在计算节点上执行</li>
-<li>脚本输出写到输出文件中</li>
-</ul>
-<p>以下是一些常见的作业资源需求参数，使用#SBATCH -xx xxx的方式写入脚本中即可</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs css">-J,<span class="hljs-attr">--job-name</span>：指定作业名称<br>-N,<span class="hljs-attr">--nodes</span>：节点数量<br>-n,<span class="hljs-attr">--ntasks</span>：使用的CPU核数<br><span class="hljs-attr">--mem</span>：指定每个节点上使用的物理内存<br>-t,<span class="hljs-attr">--time</span>：运行时间，超出时间限制的作业将被终止<br>-<span class="hljs-selector-tag">p</span>,<span class="hljs-attr">--partition</span>：指定分区<br><span class="hljs-attr">--reservation</span>：资源预留<br>-w,<span class="hljs-attr">--nodelist</span>：指定节点运行作业<br>-x,<span class="hljs-attr">--exclude</span>：分配给作业的节点中不要包含指定节点<br><span class="hljs-attr">--ntasks-per-node</span>：指定每个节点使用几个CPU核心<br><span class="hljs-attr">--begin</span>：指定作业开始时间<br>-D，<span class="hljs-attr">--chdir</span>：指定脚本/命令的工作目录<br></code></pre></td></tr></table></figure>
+                <p>Git 并不像 SVN 那样有个中心服务器。</p>
+<p>目前我们使用到的 Git 命令都是在本地执行，如果你想通过 Git 分享你的代码或者与其他开发人员合作。 你就需要将数据放到一台其他开发人员能够连接的服务器上。</p>
+<p>本例使用了 Github 作为远程仓库，你可以先阅读我们的 <a target="_blank" rel="noopener" href="https://www.w3cschool.cn/w3cnote/git-guide.html">Github 简明教程。</a></p>
+<h2 id="添加远程库"><a href="#添加远程库" class="headerlink" title="添加远程库"></a>添加远程库</h2><p>要添加一个新的远程仓库，可以指定一个简单的名字，以便将来引用,命令格式如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">git remote add [shortname] [url]<br><br></code></pre></td></tr></table></figure>
+
+<p>本例以Github为例作为远程仓库，如果你没有Github可以在官网<a target="_blank" rel="noopener" href="https://github.com/">https://github.com/</a>注册。</p>
+<p>由于你的本地Git仓库和GitHub仓库之间的传输是通过SSH加密的，所以我们需要配置验证信息：</p>
+<p>使用以下命令生成SSH Key：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">ssh-keygen -t rsa -C <span class="hljs-string">&quot;youremail@example.com&quot;</span><br></code></pre></td></tr></table></figure>
+
+<p>后面的your_email@youremail.com改为你在github上注册的邮箱，之后会要求确认路径和输入密码，我们这使用默认的一路回车就行。成功的话会在~&#x2F;下生成.ssh文件夹，进去，打开id_rsa.pub，复制里面的key。</p>
+<p>回到github上，进入 Account Settings（账户配置），左边选择SSH Keys，Add SSH Key,title随便填，粘贴在你电脑上生成的key。</p>
+<p><img src="https://atts.w3cschool.cn/attachments/day_160929/201609291616226480.png" srcset="/img/loading.gif" lazyload></p>
+<p>为了验证是否成功，输入以下命令：</p>
+<figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs ada">$ ssh -T git@github.com<br>Hi WongJay! You<span class="hljs-symbol">&#x27;ve</span> successfully authenticated, but GitHub does <span class="hljs-keyword">not</span> provide shell <span class="hljs-keyword">access</span>.<br><br></code></pre></td></tr></table></figure>
+
+<p>以下命令说明我们已成功连上 Github。</p>
+<p>之后登录后点击” New repository “ 如下图所示：</p>
+<p><img src="https://atts.w3cschool.cn/attachments/day_160929/201609291556118344.png" srcset="/img/loading.gif" lazyload></p>
+<p>之后在在Repository name 填入 w3cschool.cn(远程仓库名) ，其他保持默认设置，点击”Create repository”按钮，就成功地创建了一个新的Git仓库：</p>
+<p><img src="https://atts.w3cschool.cn/attachments/day_160929/201609291555152907.png" srcset="/img/loading.gif" lazyload></p>
+<p>创建成功后，显示如下信息：</p>
+<p><img src="https://atts.w3cschool.cn/attachments/day_160929/201609291557318743.png" srcset="/img/loading.gif" lazyload></p>
+<p>以上信息告诉我们可以从这个仓库克隆出新的仓库，也可以把本地仓库的内容推送到GitHub仓库。</p>
+<p>现在，我们根据GitHub的提示，在本地的仓库下运行命令：</p>
+<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs crmsh">$ ls<br>README<br>W3Cschool教程测试.txt<br>test.txt<br>$ git remote add origin git@github.com:WongJay/w3cschool.cn.git<br>$ git push -u origin <span class="hljs-keyword">master</span><br><span class="hljs-title">Counting</span> objects: <span class="hljs-number">21</span>, done.<br>Delta compression using up to <span class="hljs-number">4</span> threads.<br>Compressing objects: <span class="hljs-number">100</span>% (<span class="hljs-number">15</span>/<span class="hljs-number">15</span>), done.<br>Writing objects: <span class="hljs-number">100</span>% (<span class="hljs-number">21</span>/<span class="hljs-number">21</span>), <span class="hljs-number">1.73</span> KiB | <span class="hljs-number">0</span> bytes/s, done.<br>Total <span class="hljs-number">21</span> (delta <span class="hljs-number">4</span>), reused <span class="hljs-number">0</span> (delta <span class="hljs-number">0</span>)<br>To git@github.com:WongJay/w3cschool.cn.git<br> * [new branch]      <span class="hljs-keyword">master</span> <span class="hljs-title">-&gt; master</span><br>Branch <span class="hljs-keyword">master</span> <span class="hljs-title">set</span> up to track remote branch <span class="hljs-keyword">master</span> <span class="hljs-title">from</span> origin.<br><br></code></pre></td></tr></table></figure>
+
+<p>以下命令请根据你在Github成功创建新仓库的地方复制，而不是根据我提供的命令，因为我们的Github用户名不一样，仓库名也不一样。</p>
+<p>接下来我们返回 Github 创建的仓库，就可以看到文件已上传到Github上：</p>
 
                 
               </div>
@@ -381,15 +327,8 @@
     
       <span class="category-chain">
         
-  <a href="/categories/Linux/" class="category-chain-item">Linux</a>
+  <a href="/categories/Git/" class="category-chain-item">Git</a>
   
-  
-    <span>></span>
-    
-  <a href="/categories/Linux/Slurm/" class="category-chain-item">Slurm</a>
-  
-  
-
   
 
       </span>
@@ -403,7 +342,7 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/%E5%8E%9F%E5%88%9B/">#原创</a>
+        <a href="/tags/%E6%90%AC%E8%BF%90/">#搬运</a>
       
     </div>
   
@@ -415,8 +354,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>SLURM使用教程</div>
-      <div>http://example.com/2023/02/01/Slurm-作业调度系统使用笔记/</div>
+      <div>09.Git 远程仓库</div>
+      <div>http://example.com/2023/02/01/09.Git 远程仓库/</div>
     </div>
     <div class="license-meta">
       
@@ -460,9 +399,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/02/01/07.Git%20%E6%9F%A5%E7%9C%8B%E6%8F%90%E4%BA%A4%E5%8E%86%E5%8F%B2/" title="07.Git 查看提交历史.md">
+                      <a href="/2023/02/01/05.Git%20%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/" title="05.Git 基本操作">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">07.Git 查看提交历史.md</span>
+                        <span class="hidden-mobile">05.Git 基本操作</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -470,8 +409,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2023/02/01/hello-world/" title="Hello World">
-                        <span class="hidden-mobile">Hello World</span>
+                      <a href="/2023/02/01/03.Git%20%E5%B7%A5%E4%BD%9C%E5%8C%BA%E3%80%81%E6%9A%82%E5%AD%98%E5%8C%BA%E5%92%8C%E7%89%88%E6%9C%AC%E5%BA%93/" title="03.Git 工作区、暂存区和版本库">
+                        <span class="hidden-mobile">03.Git 工作区、暂存区和版本库</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

@@ -16,28 +16,22 @@
   <meta name="author" content="John Doe">
   <meta name="keywords" content="">
   
-    <meta name="description" content="SLURM使用教程常用术语 user：用户名 node：计算节点 core：cpu核 job：作业 job step：作业步，单个作业可以有多个作业步 partition：分区，作业需在特定分区中运行 QOS：服务质量，可理解为用户可使用的CPU、内存等资源限制 tasks：任务数，默认一个任务使用一个cpu核，可理解为作业所需的cpu核数 socket：cpu插槽，可理解为物理cpu颗数 std">
+    <meta name="description" content="如果你达到一个重要的阶段，并希望永远记住那个特别的提交快照，你可以使用 git tag 给它打上标签。 比如说，我们想为我们的 w3cschoolcc 项目发布一个”1.0”版本。 我们可以用 git tag -a v1.0 命令给最新一次提交打上（HEAD）”v1.0”的标签。 -a 选项意为”创建一个带注解的标签”。 不用 -a 选项也可以执行的，但它不会记录这标签是啥时候打的，谁打的，也不会">
 <meta property="og:type" content="article">
-<meta property="og:title" content="SLURM使用教程">
-<meta property="og:url" content="http://example.com/2023/02/01/Slurm-%E4%BD%9C%E4%B8%9A%E8%B0%83%E5%BA%A6%E7%B3%BB%E7%BB%9F%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/index.html">
+<meta property="og:title" content="08.Git 标签">
+<meta property="og:url" content="http://example.com/2023/02/01/08.Git%20%E6%A0%87%E7%AD%BE/index.html">
 <meta property="og:site_name" content="楠佐律佑">
-<meta property="og:description" content="SLURM使用教程常用术语 user：用户名 node：计算节点 core：cpu核 job：作业 job step：作业步，单个作业可以有多个作业步 partition：分区，作业需在特定分区中运行 QOS：服务质量，可理解为用户可使用的CPU、内存等资源限制 tasks：任务数，默认一个任务使用一个cpu核，可理解为作业所需的cpu核数 socket：cpu插槽，可理解为物理cpu颗数 std">
+<meta property="og:description" content="如果你达到一个重要的阶段，并希望永远记住那个特别的提交快照，你可以使用 git tag 给它打上标签。 比如说，我们想为我们的 w3cschoolcc 项目发布一个”1.0”版本。 我们可以用 git tag -a v1.0 命令给最新一次提交打上（HEAD）”v1.0”的标签。 -a 选项意为”创建一个带注解的标签”。 不用 -a 选项也可以执行的，但它不会记录这标签是啥时候打的，谁打的，也不会">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://example.com/20230201154541049/20230201035423129.png">
-<meta property="og:image" content="http://example.com/20230201154541049/20230201035533330.png">
-<meta property="og:image" content="http://example.com/20230201154541049/20230201035616729.png">
-<meta property="og:image" content="http://example.com/20230201154541049/20230201035711947.png">
-<meta property="og:image" content="http://example.com/20230201154541049/20230201035739038.png">
-<meta property="article:published_time" content="2023-02-01T08:08:30.000Z">
-<meta property="article:modified_time" content="2023-02-01T08:11:58.038Z">
+<meta property="article:published_time" content="2023-02-01T08:49:30.000Z">
+<meta property="article:modified_time" content="2023-02-01T09:00:26.502Z">
 <meta property="article:author" content="John Doe">
-<meta property="article:tag" content="原创">
+<meta property="article:tag" content="搬运">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="http://example.com/20230201154541049/20230201035423129.png">
   
   
   
-  <title>SLURM使用教程 - 楠佐律佑</title>
+  <title>08.Git 标签 - 楠佐律佑</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -203,7 +197,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="SLURM使用教程"></span>
+            <span id="subtitle" data-typed-text="08.Git 标签"></span>
           
         </div>
 
@@ -214,7 +208,7 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-02-01 16:08" pubdate>
+        <time datetime="2023-02-01 16:49" pubdate>
           2023年2月1日 下午
         </time>
       </span>
@@ -226,7 +220,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.6k 字
+          1.1k 字
         
       </span>
     
@@ -237,7 +231,7 @@
         
         
         
-          14 分钟
+          10 分钟
         
       </span>
     
@@ -275,94 +269,33 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">SLURM使用教程</h1>
+            <h1 style="display: none">08.Git 标签</h1>
             
             
               <div class="markdown-body">
                 
-                <h1 id="SLURM使用教程"><a href="#SLURM使用教程" class="headerlink" title="SLURM使用教程"></a>SLURM使用教程</h1><h2 id="常用术语"><a href="#常用术语" class="headerlink" title="常用术语"></a>常用术语</h2><ul>
-<li>user：用户名</li>
-<li>node：计算节点</li>
-<li>core：cpu核</li>
-<li>job：作业</li>
-<li>job step：作业步，单个作业可以有多个作业步</li>
-<li>partition：分区，作业需在特定分区中运行</li>
-<li>QOS：服务质量，可理解为用户可使用的CPU、内存等资源限制</li>
-<li>tasks：任务数，默认一个任务使用一个cpu核，可理解为作业所需的cpu核数</li>
-<li>socket：cpu插槽，可理解为物理cpu颗数</li>
-<li>stdout：标准输出文件，程序运行正常时输出信息的文件，一般指输出到屏幕的信息</li>
-<li>stderr：标准错误文件，程序运行出错时输出信息的文件，一般指输出到屏幕的信息</li>
-</ul>
-<h2 id="命令"><a href="#命令" class="headerlink" title="命令"></a>命令</h2><ul>
-<li>sbatch：提交作业脚本。此脚本一般会包含一个或多个srun命令启动并行任务</li>
-<li>sinfo：显示分区或节点状态，可以通过参数选项进行过滤、和排序</li>
-<li>squeue：显示队列的作业及作业状态</li>
-<li>scancel：取消排队或运行中的作业</li>
-<li>scontrol：显示或设定slurm作业、分区、节点等状态</li>
-<li>sacctmgr：显示和设置账户关联的QOS等信息</li>
-<li>sacct：显示历史作业信息</li>
-<li>srun：运行并行作业，具有多个选项，如：最大和最小节点数、处理器数、是否指定和排除节点</li>
-</ul>
-<h2 id="节点状态查看"><a href="#节点状态查看" class="headerlink" title="节点状态查看"></a>节点状态查看</h2><p><code>sinfo</code><br><img src="/20230201154541049/20230201035423129.png" srcset="/img/loading.gif" lazyload></p>
-<ul>
-<li>PARRITION：节点所在分区</li>
-<li>AVAIL：分区状态，up标识可用，down标识不可用</li>
-<li>TIMELIMIT：程序运行最大时长，infinite表示不限制，如果限制格式为days-houres:minutes:seconds</li>
-<li>NODES：节点数</li>
-<li>NODELIST：节点名列表</li>
-<li>STATE：节点状态，可能的状态包括：</li>
-<li>allocated、alloc ：已分配</li>
-<li>completing、comp：完成中</li>
-<li>down：宕机</li>
-<li>drained、drain：已失去活力</li>
-<li>fail：失效</li>
-<li>idle：空闲</li>
-<li>mixed：混合，节点在运行作业，但有些空闲CPU核，可接受新作业</li>
-<li>reserved、resv：资源预留</li>
-<li>unknown、unk：未知原因</li>
-</ul>
-<p>如果状态带有后缀*，表示节点没有响应</p>
-<h2 id="分区信息查看"><a href="#分区信息查看" class="headerlink" title="分区信息查看"></a>分区信息查看</h2><p><img src="/20230201154541049/20230201035533330.png" srcset="/img/loading.gif" lazyload></p>
-<p>DisableRootJobs:不允许root提交作业</p>
-<p>Maxtime：最大运行时间</p>
-<p>LLN：是否按最小负载节点调度</p>
-<p>Maxnodes：最大节点数</p>
-<p>Hidden：是否为隐藏分区</p>
-<p>Default：是否为默认分区</p>
-<p>OverSubscribe：是否允许超时</p>
-<p>ExclusiveUser：排除的用户</p>
-<h2 id="作业信息查看"><a href="#作业信息查看" class="headerlink" title="作业信息查看"></a>作业信息查看</h2><p><img src="/20230201154541049/20230201035616729.png" srcset="/img/loading.gif" lazyload></p>
-<ul>
-<li>JOBID：作业号</li>
-<li>PARITION：分区名</li>
-<li>NAME：作业名</li>
-<li>USER：用户名</li>
-<li>ST：状态，常见的状态包括：</li>
-<li>PD、Q：排队中 ，PENDING</li>
-<li>R：运行中 ，RUNNING</li>
-<li>CA：已取消，CANCELLED</li>
-<li>CG：完成中，COMPLETIONG</li>
-<li>F：已失败，FAILED</li>
-<li>TO：超时，TIMEOUT</li>
-<li>NF：节点失效，NODE FAILURE</li>
-<li>CD：已完成，COMPLETED<br><img src="/20230201154541049/20230201035711947.png" srcset="/img/loading.gif" lazyload></li>
-</ul>
-<p>批处理模式提交作业<br>1.用户编写作业脚本</p>
-<p>2.提交作业</p>
-<p>3.作业排队等待资源分配</p>
-<p>4.在首节点加载执行作业脚本</p>
-<p>5.脚本执行结束，释放资源</p>
-<p>6.用户在输出文件中查看运行结果</p>
-<p><img src="/20230201154541049/20230201035739038.png" srcset="/img/loading.gif" lazyload></p>
-<ul>
-<li>作业脚本为文本文件，首行一“#!”开头，指定解释程序</li>
-<li>脚本中可通过srun加载计算任务</li>
-<li>一个作业可包含多个作业步</li>
-<li>脚本在管理节点上提交，实际在计算节点上执行</li>
-<li>脚本输出写到输出文件中</li>
-</ul>
-<p>以下是一些常见的作业资源需求参数，使用#SBATCH -xx xxx的方式写入脚本中即可</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs css">-J,<span class="hljs-attr">--job-name</span>：指定作业名称<br>-N,<span class="hljs-attr">--nodes</span>：节点数量<br>-n,<span class="hljs-attr">--ntasks</span>：使用的CPU核数<br><span class="hljs-attr">--mem</span>：指定每个节点上使用的物理内存<br>-t,<span class="hljs-attr">--time</span>：运行时间，超出时间限制的作业将被终止<br>-<span class="hljs-selector-tag">p</span>,<span class="hljs-attr">--partition</span>：指定分区<br><span class="hljs-attr">--reservation</span>：资源预留<br>-w,<span class="hljs-attr">--nodelist</span>：指定节点运行作业<br>-x,<span class="hljs-attr">--exclude</span>：分配给作业的节点中不要包含指定节点<br><span class="hljs-attr">--ntasks-per-node</span>：指定每个节点使用几个CPU核心<br><span class="hljs-attr">--begin</span>：指定作业开始时间<br>-D，<span class="hljs-attr">--chdir</span>：指定脚本/命令的工作目录<br></code></pre></td></tr></table></figure>
+                <p>如果你达到一个重要的阶段，并希望永远记住那个特别的提交快照，你可以使用 git tag 给它打上标签。</p>
+<p>比如说，我们想为我们的 w3cschoolcc 项目发布一个”1.0”版本。 我们可以用 git tag -a v1.0 命令给最新一次提交打上（HEAD）”v1.0”的标签。</p>
+<p>-a 选项意为”创建一个带注解的标签”。 不用 -a 选项也可以执行的，但它不会记录这标签是啥时候打的，谁打的，也不会让你添加个标签的注解。 我推荐一直创建带注解的标签。</p>
+<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs crmsh">$ git <span class="hljs-keyword">tag</span> <span class="hljs-title">-a</span> v1.<span class="hljs-number">0</span> <br><br></code></pre></td></tr></table></figure>
+
+<p>当你执行 git tag -a 命令时，Git 会打开你的编辑器，让你写一句标签注解，就像你给提交写注解一样。</p>
+<p>现在，注意当我们执行 git log –decorate 时，我们可以看到我们的标签了：</p>
+<figure class="highlight gams"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs gams"><span class="hljs-symbol">$</span> git <span class="hljs-built_in">log</span> --oneline --decorate --graph<br><span class="hljs-comment">*   88afe0e (HEAD, tag: v1.0, master) Merge branch &#x27;change_site&#x27;</span><br>|\  <br>| * d7e7346 (change_site) changed the site<br><span class="hljs-comment">* | 14b4dca 新增加一行</span><br>|/  <br><span class="hljs-comment">* 556f0a0 removed test2.txt</span><br><span class="hljs-comment">* 2e082b7 add test2.txt</span><br><span class="hljs-comment">* 048598f add test.txt</span><br><span class="hljs-comment">* 85fc7e7 test comment from w3cschool.cn</span><br><br></code></pre></td></tr></table></figure>
+
+<p>如果我们忘了给某个提交打标签，又将它发布了，我们可以给它追加标签。</p>
+<p>例如，假设我们发布了提交 85fc7e7(上面实例最后一行)，但是那时候忘了给它打标签。 我们现在也可以：</p>
+<figure class="highlight gams"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs gams"><span class="hljs-symbol">$</span> git tag -a v0<span class="hljs-number">.9</span> <span class="hljs-number">85</span>fc7e7<br><span class="hljs-symbol">$</span> git <span class="hljs-built_in">log</span> --oneline --decorate --graph<br><span class="hljs-comment">*   88afe0e (HEAD, tag: v1.0, master) Merge branch &#x27;change_site&#x27;</span><br>|\  <br>| * d7e7346 (change_site) changed the site<br><span class="hljs-comment">* | 14b4dca 新增加一行</span><br>|/  <br><span class="hljs-comment">* 556f0a0 removed test2.txt</span><br><span class="hljs-comment">* 2e082b7 add test2.txt</span><br><span class="hljs-comment">* 048598f add test.txt</span><br><span class="hljs-comment">* 85fc7e7 (tag: v0.9) test comment from w3cschool.cn</span><br><br></code></pre></td></tr></table></figure>
+
+<p>如果我们要查看所有标签可以使用以下命令：</p>
+<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs crmsh">$ git <span class="hljs-keyword">tag</span><br><span class="hljs-title">v0</span>.<span class="hljs-number">9</span><br>v1.<span class="hljs-number">0</span><br><br></code></pre></td></tr></table></figure>
+
+<p>指定标签信息命令：</p>
+<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs crmsh">git <span class="hljs-keyword">tag</span> <span class="hljs-title">-a</span> <span class="hljs-tag">&lt;tagname&gt;</span> -m <span class="hljs-string">&quot;w3cschool.cn标签&quot;</span><br><br></code></pre></td></tr></table></figure>
+
+<p>PGP签名标签命令：</p>
+<pre><code class="hljs">git tag -s &lt;tagname&gt; -m &quot;w3cschool.cn标签&quot;
+</code></pre>
 
                 
               </div>
@@ -381,15 +314,8 @@
     
       <span class="category-chain">
         
-  <a href="/categories/Linux/" class="category-chain-item">Linux</a>
+  <a href="/categories/Git/" class="category-chain-item">Git</a>
   
-  
-    <span>></span>
-    
-  <a href="/categories/Linux/Slurm/" class="category-chain-item">Slurm</a>
-  
-  
-
   
 
       </span>
@@ -403,7 +329,7 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/%E5%8E%9F%E5%88%9B/">#原创</a>
+        <a href="/tags/%E6%90%AC%E8%BF%90/">#搬运</a>
       
     </div>
   
@@ -415,8 +341,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>SLURM使用教程</div>
-      <div>http://example.com/2023/02/01/Slurm-作业调度系统使用笔记/</div>
+      <div>08.Git 标签</div>
+      <div>http://example.com/2023/02/01/08.Git 标签/</div>
     </div>
     <div class="license-meta">
       
@@ -460,9 +386,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/02/01/07.Git%20%E6%9F%A5%E7%9C%8B%E6%8F%90%E4%BA%A4%E5%8E%86%E5%8F%B2/" title="07.Git 查看提交历史.md">
+                      <a href="/2023/02/01/01.Git%20%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/" title="01.Git 安装配置">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">07.Git 查看提交历史.md</span>
+                        <span class="hidden-mobile">01.Git 安装配置</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -470,8 +396,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2023/02/01/hello-world/" title="Hello World">
-                        <span class="hidden-mobile">Hello World</span>
+                      <a href="/2023/02/01/07.Git%20%E6%9F%A5%E7%9C%8B%E6%8F%90%E4%BA%A4%E5%8E%86%E5%8F%B2/" title="07.Git 查看提交历史.md">
+                        <span class="hidden-mobile">07.Git 查看提交历史.md</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

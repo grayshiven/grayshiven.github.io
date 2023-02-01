@@ -1,0 +1,713 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="John Doe">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="几乎每一种版本控制系统都以某种形式支持分支。使用分支意味着你可以从开发主线上分离开来，然后在不影响主线的同时继续工作。 创建分支命令： 1git branch (branchname)  切换分支命令: 1git checkout (branchname)  当你切换分支的时候，Git 会用该分支的最后提交的快照替换你的工作目录的内容， 所以多个分支不需要多个目录。 合并分支命令: 1git me">
+<meta property="og:type" content="article">
+<meta property="og:title" content="06. Git 分支管理">
+<meta property="og:url" content="http://example.com/2023/02/01/06.Git%20%E5%88%86%E6%94%AF%E7%AE%A1%E7%90%86/index.html">
+<meta property="og:site_name" content="楠佐律佑">
+<meta property="og:description" content="几乎每一种版本控制系统都以某种形式支持分支。使用分支意味着你可以从开发主线上分离开来，然后在不影响主线的同时继续工作。 创建分支命令： 1git branch (branchname)  切换分支命令: 1git checkout (branchname)  当你切换分支的时候，Git 会用该分支的最后提交的快照替换你的工作目录的内容， 所以多个分支不需要多个目录。 合并分支命令: 1git me">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-02-01T08:51:30.000Z">
+<meta property="article:modified_time" content="2023-02-01T08:59:48.053Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="搬运">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+  
+  <title>06. Git 分支管理 - 楠佐律佑</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.4","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 5.4.2"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Fluid</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="06. Git 分支管理"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2023-02-01 16:51" pubdate>
+          2023年2月1日 下午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          3.6k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          30 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">06. Git 分支管理</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <p>几乎每一种版本控制系统都以某种形式支持分支。使用分支意味着你可以从开发主线上分离开来，然后在不影响主线的同时继续工作。</p>
+<p>创建分支命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">git branch (branchname)<br></code></pre></td></tr></table></figure>
+
+<p>切换分支命令:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">git checkout (branchname)<br></code></pre></td></tr></table></figure>
+
+<p>当你切换分支的时候，Git 会用该分支的最后提交的快照替换你的工作目录的内容， 所以多个分支不需要多个目录。</p>
+<p>合并分支命令:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">git merge <br></code></pre></td></tr></table></figure>
+
+<p>你可以多次合并到统一分支， 也可以选择在合并之后直接删除被并入的分支。</p>
+<h2 id="Git-分支管理"><a href="#Git-分支管理" class="headerlink" title="Git 分支管理"></a>Git 分支管理</h2><h3 id="列出分支"><a href="#列出分支" class="headerlink" title="列出分支"></a>列出分支</h3><p>列出分支基本命令：</p>
+<pre><code class="hljs">git branch
+</code></pre>
+<p>没有参数时，git branch 会列出你在本地的分支。</p>
+<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs crmsh">$ git branch<br>* <span class="hljs-keyword">master</span><br><span class="hljs-title"></span><br></code></pre></td></tr></table></figure>
+
+<p>此例的意思就是，我们有一个叫做”master”的分支，并且该分支是当前分支。</p>
+<p>当你执行 git init 的时候，缺省情况下 Git 就会为你创建”master”分支。</p>
+<p>如果我们要手动创建一个分支，并切换过去。执行 git branch (branchname) 即可。</p>
+<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs crmsh">$ git branch testing<br>$ git branch<br>* <span class="hljs-keyword">master</span><br>  <span class="hljs-title">testing</span><br><br></code></pre></td></tr></table></figure>
+
+<p>现在我们可以看到，有了一个新分支 testing。</p>
+<p>当你以此方式在上次提交更新之后创建了新分支，如果后来又有更新提交， 然后又切换到了”testing”分支，Git 将还原你的工作目录到你创建分支时候的样子</p>
+<p>接下来我们将演示如何切换分支，我们用 git checkout (branch) 切换到我们要修改的分支。</p>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs vim">$ <span class="hljs-keyword">ls</span><br>README<br>$ <span class="hljs-keyword">echo</span> <span class="hljs-string">&#x27;w3cschool.cn&#x27;</span> &gt; test.txt<br>$ git <span class="hljs-built_in">add</span> .<br>$ git commit -<span class="hljs-keyword">m</span> <span class="hljs-string">&#x27;add test.txt&#x27;</span><br>[master <span class="hljs-number">048598</span><span class="hljs-keyword">f</span>] <span class="hljs-built_in">add</span> test.txt<br> <span class="hljs-number">2</span> <span class="hljs-keyword">files</span> changed, <span class="hljs-number">1</span> insertion(+), <span class="hljs-number">3</span> deletions(-)<br> <span class="hljs-keyword">delete</span> <span class="hljs-keyword">mode</span> <span class="hljs-number">100644</span> hello.php<br> create <span class="hljs-keyword">mode</span> <span class="hljs-number">100644</span> test.txt<br>$ <span class="hljs-keyword">ls</span><br>README       test.txt<br>$ git checkout testing<br>Switched <span class="hljs-keyword">to</span> branch <span class="hljs-string">&#x27;testing&#x27;</span><br>$ <span class="hljs-keyword">ls</span><br>README      hello.php<br><br></code></pre></td></tr></table></figure>
+
+<p>当我们切换到”testing”分支的时候，我们添加的新文件test.txt被移除了, 原来被删除的文件hello.php文件又出现了。切换回”master”分支的时候，它们有重新出现了。</p>
+<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs crmsh">$ git checkout <span class="hljs-keyword">master</span><br><span class="hljs-title">Switched</span> to branch &#x27;<span class="hljs-literal">master</span>&#x27;<br>$ ls<br>README        test.txt<br><br></code></pre></td></tr></table></figure>
+
+<p>我们也可以使用 git checkout -b (branchname) 命令来创建新分支并立即切换到该分支下，从而在该分支中操作。</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs powershell"><span class="hljs-variable">$</span> git checkout <span class="hljs-literal">-b</span> newtest<br>Switched to a new branch <span class="hljs-string">&#x27;newtest&#x27;</span><br><span class="hljs-variable">$</span> git <span class="hljs-built_in">rm</span> test2.txt <br><span class="hljs-built_in">rm</span> <span class="hljs-string">&#x27;test2.txt&#x27;</span><br><span class="hljs-variable">$</span> <span class="hljs-built_in">ls</span><br>README      test.txt<br><span class="hljs-variable">$</span> git commit <span class="hljs-literal">-am</span> <span class="hljs-string">&#x27;removed test2.txt&#x27;</span><br>[<span class="hljs-type">newtest</span> <span class="hljs-number">556</span><span class="hljs-type">f0a0</span>] removed test2.txt<br> <span class="hljs-number">1</span> file changed, <span class="hljs-number">1</span> deletion(-)<br> delete mode <span class="hljs-number">100644</span> test2.txt<br><span class="hljs-variable">$</span> git checkout master<br>Switched to branch <span class="hljs-string">&#x27;master&#x27;</span><br><span class="hljs-variable">$</span> <span class="hljs-built_in">ls</span><br>README        test.txt    test2.txt<br><br></code></pre></td></tr></table></figure>
+
+<p>如你所见，我们创建了一个分支，在该分支的上下文中移除了一些文件，然后切换回我们的主分支，那些文件又回来了。</p>
+<p>使用分支将工作切分开来，从而让我们能够在不同上下文中做事，并来回切换。</p>
+<h3 id="删除分支"><a href="#删除分支" class="headerlink" title="删除分支"></a>删除分支</h3><p>删除分支命令：</p>
+<pre><code class="hljs">git branch -d (branchname)
+</code></pre>
+<p>例如我们要删除”testing”分支：</p>
+<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs crmsh">$ git branch<br>* <span class="hljs-keyword">master</span><br>  <span class="hljs-title">testing</span><br>$ git branch -d testing<br>Deleted branch testing (was <span class="hljs-number">85</span>fc7e7).<br>$ git branch<br>* <span class="hljs-keyword">master</span><br><span class="hljs-title"></span><br></code></pre></td></tr></table></figure>
+
+<h3 id="分支合并"><a href="#分支合并" class="headerlink" title="分支合并"></a>分支合并</h3><p>一旦某分支有了独立内容，你终究会希望将它合并回到你的主分支。 你可以使用以下命令将任何分支合并到当前分支中去：</p>
+<pre><code class="hljs">git merge
+</code></pre>
+<figure class="highlight gams"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs gams"><span class="hljs-symbol">$</span> git branch<br><span class="hljs-comment">* master</span><br>  newtest<br><span class="hljs-symbol">$</span> ls<br>README       test.txt    test2.txt<br><span class="hljs-symbol">$</span> git merge newtest<br><span class="hljs-function"><span class="hljs-title">Updating</span></span> <span class="hljs-number">2e082</span>b7.<span class="hljs-number">.556</span>f0a0<br>Fast-forward<br> test2.txt | <span class="hljs-number">1</span> -<br> <span class="hljs-number">1</span> <span class="hljs-keyword">file</span> changed, <span class="hljs-number">1</span> deletion(-)<br> delete mode <span class="hljs-number">100644</span> test2.txt<br><span class="hljs-symbol">$</span> ls<br>README      test.txt<br><br></code></pre></td></tr></table></figure>
+
+<p>以上实例中我们将 newtest 分支合并到主分支去，test2.txt 文件被删除。</p>
+<h3 id="合并冲突"><a href="#合并冲突" class="headerlink" title="合并冲突"></a>合并冲突</h3><p>合并并不仅仅是简单的文件添加、移除的操作，Git 也会合并修改。</p>
+<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs crmsh">$ git branch<br>* <span class="hljs-keyword">master</span><br><span class="hljs-title">$</span> cat test.txt<br>w3cschool.cn<br><br></code></pre></td></tr></table></figure>
+
+<p>首先，我们创建一个叫做”change_site”的分支，切换过去，我们将内容改为 <a target="_blank" rel="noopener" href="http://www.w3cschool.cn/">www.w3cschool.cn</a> 。</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs stylus">$ git checkout -<span class="hljs-selector-tag">b</span> change_site<br>Switched to <span class="hljs-selector-tag">a</span> new branch <span class="hljs-string">&#x27;change_site&#x27;</span><br>$ vim test<span class="hljs-selector-class">.txt</span> <br>$ head -<span class="hljs-number">1</span> test<span class="hljs-selector-class">.txt</span> <br>www<span class="hljs-selector-class">.w3cschool</span><span class="hljs-selector-class">.cn</span><br>$ git commit -am <span class="hljs-string">&#x27;changed the site&#x27;</span><br><span class="hljs-selector-attr">[change_site d7e7346]</span> changed the site<br> <span class="hljs-number">1</span> file changed, <span class="hljs-number">1</span> <span class="hljs-built_in">insertion</span>(+), <span class="hljs-number">1</span> <span class="hljs-built_in">deletion</span>(-)<br> <br></code></pre></td></tr></table></figure>
+
+<p>将修改的内容提交到 “change_site” 分支中。 现在，假如切换回 “master” 分支我们可以看内容恢复到我们修改前的，我们再次修改test.txt文件。</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><code class="hljs stylus">$ git checkout master<br>Switched to branch <span class="hljs-string">&#x27;master&#x27;</span><br>$ head -<span class="hljs-number">1</span> test<span class="hljs-selector-class">.txt</span> <br>w3cschool<span class="hljs-selector-class">.cn</span><br>$ vim test<span class="hljs-selector-class">.txt</span> <br>$ cat test<span class="hljs-selector-class">.txt</span><br>w3cschool<span class="hljs-selector-class">.cn</span><br>新增加一行<br>$ git diff<br>diff <span class="hljs-attr">--git</span> a/test<span class="hljs-selector-class">.txt</span> b/test<span class="hljs-selector-class">.txt</span><br>index <span class="hljs-number">704</span>cce7.<span class="hljs-selector-class">.f84c2a4</span> <span class="hljs-number">100644</span><br>--- a/test<span class="hljs-selector-class">.txt</span><br>+++ b/test<span class="hljs-selector-class">.txt</span><br>@@ -<span class="hljs-number">1</span> +<span class="hljs-number">1</span>,<span class="hljs-number">2</span> @@<br> w3cschool<span class="hljs-selector-class">.cn</span><br>+新增加一行<br>$ git commit -am <span class="hljs-string">&#x27;新增加一行&#x27;</span><br><span class="hljs-selector-attr">[master 14b4dca]</span> 新增加一行<br> <span class="hljs-number">1</span> file changed, <span class="hljs-number">1</span> <span class="hljs-built_in">insertion</span>(+)<br> <br></code></pre></td></tr></table></figure>
+
+<p>现在这些改变已经记录到我的 “master” 分支了。接下来我们将 “change_site” 分支合并过来。</p>
+<figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs pgsql"> $ git merge change_site<br>Auto-merging test.txt<br><span class="hljs-keyword">CONFLICT</span> (content): Merge <span class="hljs-keyword">conflict</span> <span class="hljs-keyword">in</span> test.txt<br>Automatic merge failed; fix conflicts <span class="hljs-keyword">and</span> <span class="hljs-keyword">then</span> <span class="hljs-keyword">commit</span> the result.<br>$ cat test.txt <br>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD w3cschool.cn 新增加一行 ======= www.w3cschool.cn &gt;&gt;&gt;&gt;&gt;&gt;&gt; change_site<br><br></code></pre></td></tr></table></figure>
+
+<p>我们将前一个分支合并到 “master” 分支，一个合并冲突就出现了，接下来我们需要手动去修改它。</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs stylus">$ vim test<span class="hljs-selector-class">.txt</span> <br>$ cat test<span class="hljs-selector-class">.txt</span> <br>www<span class="hljs-selector-class">.w3cschool</span><span class="hljs-selector-class">.cn</span><br>新增加一行<br>$ git diff<br>diff <span class="hljs-attr">--cc</span> test<span class="hljs-selector-class">.txt</span><br>index f84c2a4,bccb7c2..<span class="hljs-number">0000000</span><br>--- a/test<span class="hljs-selector-class">.txt</span><br>+++ b/test<span class="hljs-selector-class">.txt</span><br>@@@ -<span class="hljs-number">1</span>,<span class="hljs-number">2</span> -<span class="hljs-number">1</span>,<span class="hljs-number">1</span> +<span class="hljs-number">1</span>,<span class="hljs-number">2</span> @@@<br>- w3cschool<span class="hljs-selector-class">.cn</span><br>+ www<span class="hljs-selector-class">.w3cschool</span><span class="hljs-selector-class">.cn</span><br> +新增加一行<br><br></code></pre></td></tr></table></figure>
+
+<p>在 Git 中，我们可以用 git add 要告诉 Git 文件冲突已经解决</p>
+<figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs elixir"><span class="hljs-variable">$ </span>git status -s<br><span class="hljs-title class_">UU</span> test.txt<br><span class="hljs-variable">$ </span>git add test.txt <br><span class="hljs-variable">$ </span>git status -s<br>M  test.txt<br><span class="hljs-variable">$ </span>git commit<br>[master <span class="hljs-number">88</span>afe0e] <span class="hljs-title class_">Merge</span> branch <span class="hljs-string">&#x27;change_site&#x27;</span><br><br></code></pre></td></tr></table></figure>
+
+<p>现在我们成功解决了合并中的冲突，并提交了结果。</p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Git/" class="category-chain-item">Git</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E6%90%AC%E8%BF%90/">#搬运</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>06. Git 分支管理</div>
+      <div>http://example.com/2023/02/01/06.Git 分支管理/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>John Doe</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2023年2月1日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2023/02/01/13.Git%20%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" title="13.Git 常用命令">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">13.Git 常用命令</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2023/02/01/05.Git%20%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/" title="05.Git 基本操作">
+                        <span class="hidden-mobile">05.Git 基本操作</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.18.2/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
