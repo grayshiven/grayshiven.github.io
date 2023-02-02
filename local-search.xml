@@ -4,6 +4,33 @@
   
   
   <entry>
+    <title>TensorFlow和Pytorch对应版本对照表</title>
+    <link href="/2023/02/02/TensorFlow%E5%92%8CPytorch%E5%AF%B9%E5%BA%94%E7%89%88%E6%9C%AC%E5%AF%B9%E7%85%A7%E8%A1%A8/"/>
+    <url>/2023/02/02/TensorFlow%E5%92%8CPytorch%E5%AF%B9%E5%BA%94%E7%89%88%E6%9C%AC%E5%AF%B9%E7%85%A7%E8%A1%A8/</url>
+    
+    <content type="html"><![CDATA[<h2 id="TensorFlow和Pytorch对应版本对照表"><a href="#TensorFlow和Pytorch对应版本对照表" class="headerlink" title="TensorFlow和Pytorch对应版本对照表"></a>TensorFlow和Pytorch对应版本对照表</h2><p>备注：<a href="https://blog.csdn.net/DuLNode/article/details/123428294?spm=1001.2101.3001.6650.1&utm_medium=distribute.pc_relevant.none-task-blog-2~default~CTRLIST~Rate-1-123428294-blog-121866555.pc_relevant_3mothn_strategy_recovery&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2~default~CTRLIST~Rate-1-123428294-blog-121866555.pc_relevant_3mothn_strategy_recovery&utm_relevant_index=2">原文链接</a></p><h3 id="TensorFlow和Pytorch对应版本对照表-1"><a href="#TensorFlow和Pytorch对应版本对照表-1" class="headerlink" title="TensorFlow和Pytorch对应版本对照表"></a>TensorFlow和Pytorch对应版本对照表</h3><ul><li><a href="#TensorFlow_2">TensorFlow对应版本对照表</a></li><li><a href="#Pytorch_29">Pytorch对应版本对照表</a></li></ul><h2 id="TensorFlow对应版本对照表"><a href="#TensorFlow对应版本对照表" class="headerlink" title="TensorFlow对应版本对照表"></a>TensorFlow对应版本对照表</h2><table><thead><tr><th>版本</th><th>Python 版本</th><th>编译器</th><th>构建工具</th><th>cuDNN</th><th>CUDA</th></tr></thead><tbody><tr><td>tensorflow_gpu-2.6.0</td><td>3.6-3.9</td><td>MSVC 2019</td><td>Bazel 3.7.2</td><td>8.1</td><td>11.2</td></tr><tr><td>tensorflow_gpu-2.5.0</td><td>3.6-3.9</td><td>MSVC 2019</td><td>Bazel 3.7.2</td><td>8.1</td><td>11.2</td></tr><tr><td>tensorflow_gpu-2.4.0</td><td>3.6-3.8</td><td>MSVC 2019</td><td>Bazel 3.1.0</td><td>8.0</td><td>11.0</td></tr><tr><td>tensorflow_gpu-2.3.0</td><td>3.5-3.8</td><td>MSVC 2019</td><td>Bazel 3.1.0</td><td>7.6</td><td>10.1</td></tr><tr><td>tensorflow_gpu-2.2.0</td><td>3.5-3.8</td><td>MSVC 2019</td><td>Bazel 2.0.0</td><td>7.6</td><td>10.1</td></tr><tr><td>tensorflow_gpu-2.1.0</td><td>3.5-3.7</td><td>MSVC 2019</td><td>Bazel 0.27.1-0.29.1</td><td>7.6</td><td>10.1</td></tr><tr><td>tensorflow_gpu-2.0.0</td><td>3.5-3.7</td><td>MSVC 2017</td><td>Bazel 0.26.1</td><td>7.4</td><td>10</td></tr><tr><td>tensorflow_gpu-1.15.0</td><td>3.5-3.7</td><td>MSVC 2017</td><td>Bazel 0.26.1</td><td>7.4</td><td>10</td></tr><tr><td>tensorflow_gpu-1.14.0</td><td>3.5-3.7</td><td>MSVC 2017</td><td>Bazel 0.24.1-0.25.2</td><td>7.4</td><td>10</td></tr><tr><td>tensorflow_gpu-1.13.0</td><td>3.5-3.7</td><td>MSVC 2015 update 3</td><td>Bazel 0.19.0-0.21.0</td><td>7.4</td><td>10</td></tr><tr><td>tensorflow_gpu-1.12.0</td><td>3.5-3.6</td><td>MSVC 2015 update 3</td><td>Bazel 0.15.0</td><td>7.2</td><td>9.0</td></tr><tr><td>tensorflow_gpu-1.11.0</td><td>3.5-3.6</td><td>MSVC 2015 update 3</td><td>Bazel 0.15.0</td><td>7</td><td>9</td></tr><tr><td>tensorflow_gpu-1.10.0</td><td>3.5-3.6</td><td>MSVC 2015 update 3</td><td>Cmake v3.6.3</td><td>7</td><td>9</td></tr><tr><td>tensorflow_gpu-1.9.0</td><td>3.5-3.6</td><td>MSVC 2015 update 3</td><td>Cmake v3.6.3</td><td>7</td><td>9</td></tr><tr><td>tensorflow_gpu-1.8.0</td><td>3.5-3.6</td><td>MSVC 2015 update 3</td><td>Cmake v3.6.3</td><td>7</td><td>9</td></tr><tr><td>tensorflow_gpu-1.7.0</td><td>3.5-3.6</td><td>MSVC 2015 update 3</td><td>Cmake v3.6.3</td><td>7</td><td>9</td></tr><tr><td>tensorflow_gpu-1.6.0</td><td>3.5-3.6</td><td>MSVC 2015 update 3</td><td>Cmake v3.6.3</td><td>7</td><td>9</td></tr><tr><td>tensorflow_gpu-1.5.0</td><td>3.5-3.6</td><td>MSVC 2015 update 3</td><td>Cmake v3.6.3</td><td>7</td><td>9</td></tr><tr><td>tensorflow_gpu-1.4.0</td><td>3.5-3.6</td><td>MSVC 2015 update 3</td><td>Cmake v3.6.3</td><td>6</td><td>8</td></tr><tr><td>tensorflow_gpu-1.3.0</td><td>3.5-3.6</td><td>MSVC 2015 update 3</td><td>Cmake v3.6.3</td><td>6</td><td>8</td></tr><tr><td>tensorflow_gpu-1.2.0</td><td>3.5-3.6</td><td>MSVC 2015 update 3</td><td>Cmake v3.6.3</td><td>5.1</td><td>8</td></tr><tr><td>tensorflow_gpu-1.1.0</td><td>3.5</td><td>MSVC 2015 update 3</td><td>Cmake v3.6.3</td><td>5.1</td><td>8</td></tr><tr><td>tensorflow_gpu-1.0.0</td><td>3.5</td><td>MSVC 2015 update 3</td><td>Cmake v3.6.3</td><td>5.1</td><td>8</td></tr></tbody></table><h2 id="Pytorch对应版本对照表"><a href="#Pytorch对应版本对照表" class="headerlink" title="Pytorch对应版本对照表"></a>Pytorch对应版本对照表</h2><p><a href="https://pytorch.org/get-started/previous-versions/">pytorch官网安装地址</a></p><table><thead><tr><th>PyTorch 版本</th><th>CUDA 环境</th></tr></thead><tbody><tr><td>0.4.1、1.2.0、1.4.0、1.5.0(1)、1.6.0、1.7.0(1)</td><td>9.2</td></tr><tr><td>1.2.0、1.1.0、1.0.0(1)</td><td>10.0</td></tr><tr><td>1.4.0、1.5.0(1)、1.6.0、1.7.0(1)</td><td>10.1</td></tr><tr><td>1.5.0(1)、1.6.0、1.7.0(1)、1.8.0(1)、1.9.0、1.10.0</td><td>10.2</td></tr><tr><td>1.7.0(1)</td><td>11.0</td></tr><tr><td>1.8.0(1)、1.9.0、1.10.0</td><td>11.1</td></tr><tr><td>1.8.0(1)、1.9.0、1.10.0</td><td>11.3</td></tr></tbody></table>]]></content>
+    
+    
+    <categories>
+      
+      <category>深度学习</category>
+      
+      <category>环境搭建</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>搬运</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>00.Git 简介</title>
     <link href="/2023/02/01/00.Git%20%E7%AE%80%E4%BB%8B/"/>
     <url>/2023/02/01/00.Git%20%E7%AE%80%E4%BB%8B/</url>
